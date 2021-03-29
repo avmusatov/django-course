@@ -9,6 +9,7 @@ class Pet(Model):
     sex = CharField(max_length=10)
     sterilization = BooleanField()
     toilet = BooleanField()
+    image_path = CharField(max_length=80, null=True)
 
     def __str__(self):
         return str(self.name)
@@ -17,6 +18,7 @@ class Leadership(Model):
     name = CharField(max_length=80)
     position = CharField(max_length=80)
     description = CharField(max_length=4096)
+    image_path = CharField(max_length=80, null=True)
 
     def __str__(self):
         return str(self.name)

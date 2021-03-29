@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Луна",
+        "kind": "Ориентал",
+        "age": "2 месяца",
+        "description": "Ласковая",
+        "sex": "девочка",
+        "sterilization": true,
+        "toilet": true,
+        "image_path": "/assets/images/Луна.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Кеша",
+        "kind": "Домашний",
+        "age": "5 месяцев",
+        "description": "Любит поиграть, ласковый",
+        "sex": "мальчик",
+        "sterilization": false,
+        "toilet": true,
+        "image_path": "/assets/images/Кеша.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Рыжуха",
+        "kind": "Домашний",
+        "age": "6 месяцев",
+        "description": "Любит поиграть, красивая",
+        "sex": "девочка",
+        "sterilization": false,
+        "toilet": true,
+        "image_path": "/assets/images/Рыжуха.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Маша",
+        "kind": "Домашний",
+        "age": "6 месяцев",
+        "description": "Любит поиграть, красивая",
+        "sex": "девочка",
+        "sterilization": false,
+        "toilet": false,
+        "image_path": "/assets/images/Маша.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Трэвис",
+        "kind": "Вислоухий",
+        "age": "6 месяцев",
+        "description": "Бегает",
+        "sex": "мальчик",
+        "sterilization": false,
+        "toilet": false,
+        "image_path": "/assets/images/Трэвис.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Зевс",
+        "kind": "Домашний",
+        "age": "3 месяца",
+        "description": "Сильный",
+        "sex": "мальчик",
+        "sterilization": true,
+        "toilet": true,
+        "image_path": "/assets/images/Зевс.jpg"
+    }
+]

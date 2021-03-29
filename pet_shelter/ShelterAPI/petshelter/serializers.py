@@ -12,7 +12,8 @@ class PetSerializer(serializers.ModelSerializer):
                   'description',
                   'sex',
                   'sterilization',
-                  'toilet')
+                  'toilet',
+                  'image_path')
 
 
 class LeadershipSerializer(serializers.ModelSerializer):
@@ -21,7 +22,8 @@ class LeadershipSerializer(serializers.ModelSerializer):
         fields = ('id',
                   'name',
                   'position',
-                  'description')
+                  'description',
+                  'image_path')
 
 
 class DonationSerializer(serializers.ModelSerializer):

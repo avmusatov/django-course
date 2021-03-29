@@ -7,5 +7,5 @@ export class Pet {
     sex: string;
     sterilization: string;
     toilet: string;
-    image: string;
+    image_path: string;
 }

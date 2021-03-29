@@ -1,5 +1,8 @@
 .pet-card {
-    min-width: 400px;
-    max-width: 400px;
     margin-bottom: 50px;
+}
+
+mat-card {
+    max-width: 350px;
+    min-width: 180px;
 }

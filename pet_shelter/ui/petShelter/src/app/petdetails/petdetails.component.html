@@ -1,0 +1,54 @@
+<div class="container"><h1>Подробная информация</h1></div>
+<div  class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+    <div fxFlex=40>
+        <img class="large-pet-image" src="{{pet.image_path}}" alt="large pet image">
+    </div>
+
+    <div fxFlex=40>
+        <mat-list>
+            <mat-list-item>
+                <h1 matLine>Кличка</h1>
+                <p matLine>
+                    <span> {{pet.name}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Пол</h1>
+                <p matLine>
+                    <span> {{pet.sex}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Порода</h1>
+                <p matLine>
+                    <span> {{pet.kind}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Возраст</h1>
+                <p matLine>
+                    <span> {{pet.age}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Описание</h1>
+                <p matLine>
+                    <span> {{pet.description}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Стерилизован(а)?</h1>
+                <p matLine>
+                    <span> {{pet.sterilization ? "да":"нет"}} </span>
+                </p>
+            </mat-list-item>
+            <mat-list-item>
+                <h1 matLine>Приучен(а) к туалету?</h1>
+                <p matLine>
+                    <span> {{pet.toilet? "да": "нет"}} </span>
+                </p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

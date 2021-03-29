@@ -2,5 +2,13 @@
     background-color: rgb(237, 248, 252);
     min-height: 250px;
     margin: 0;
-    padding: 50px
+    padding: 50px;
+    padding-top: 65px;
+}
+
+.app-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 }

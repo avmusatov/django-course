@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">
-    <a href="/pets"><img src="/assets/images/site-logo.png" height=50 width=50 alt="site-logo"></a>
+<mat-toolbar class="app-menu" color="primary">
+    <a routerLink=""><img src="/assets/images/site-logo.png" height=50 width=50 alt="site-logo"></a>
     <div class="flex-spacer"></div>
-    <a mat-button><span class="fa fa-paw fa-lg"></span> Животные</a>
-    <a mat-button><span class="fa fa-info fa-lg"></span> О нас</a>
-    <a mat-button><span class="fa fa-money fa-lg"></span> Оставить пожертвование</a>
+    <a mat-button routerLink=""><span class="fa fa-paw fa-lg"></span> Животные</a>
+    <a mat-button routerLink="aboutus"><span class="fa fa-info fa-lg"></span> О нас</a>
+    <a mat-button routerLink="donation"><span class="fa fa-money fa-lg"></span> Оставить пожертвование</a>
 </mat-toolbar>
 
 <div class="container jumbotron" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column"
@@ -22,7 +22,7 @@
     </div>
     <div class="flex-spacer"></div>
     <div fxFlex fxFlex.gt-sm="20%">
-        <img src="/assets/images/site-logo.png" height=400 width="400">
+        <img src="/assets/images/site-logo.png" width="100%">
     </div>
     <div fxFlex></div>
 </div>

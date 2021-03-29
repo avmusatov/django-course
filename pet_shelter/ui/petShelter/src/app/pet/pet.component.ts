@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2} from '@angular/core';
 import { SharedService } from '../shared.service';
 import { Pet } from '../shared/Pet';
 
@@ -9,11 +9,22 @@ import { Pet } from '../shared/Pet';
 })
 export class PetComponent implements OnInit {
 
-  constructor(private sharedService: SharedService) { }
+  constructor(private sharedService: SharedService, private renderer: Renderer2) { }
 
   pets: Pet[];
+  selectedPet: Pet;
 
   ngOnInit(): void {
-    this.sharedService.getPetList().subscribe(data => this.pets = data);
+    this.getPets();
+  }
+
+  getPets(): void {
+    this.sharedService.getPetList()
+    .subscribe(pets => this.pets = pets);
+  }
+
+  onSelect(pet: Pet): void {
+    this.selectedPet = pet;
+    this.renderer.selectRootElement('.pet-details').scrollIntoView();
   }
 }

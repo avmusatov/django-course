@@ -18,13 +18,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PetdetailsComponent } from './petdetails/petdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PetComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PetdetailsComponent
   ],
   imports: [
     BrowserModule,

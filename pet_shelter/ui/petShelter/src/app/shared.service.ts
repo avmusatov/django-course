@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Pet } from './shared/Pet';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,15 @@ export class SharedService {
 
   constructor(private http: HttpClient) { }
 
-  getPetList(): Observable<any[]> {
+  getPetList(): Observable<Pet[]> {
     return this.http.get<any[]>(this.APIUrl + '/pets/');
   }
 
-  addPet(value:any) {
+  addPet(value:Pet) {
     return this.http.post(this.APIUrl + '/pets/',value);
   }
 
-  updatePet(id:number, value:any) {
+  updatePet(id:number, value:Pet) {
     return this.http.put(this.APIUrl + `/pets/${id}`, value);
   }
 
