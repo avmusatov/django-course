@@ -11,7 +11,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -19,6 +22,9 @@ import 'hammerjs';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PetdetailsComponent } from './petdetails/petdetails.component';
+import { DonationComponent } from './donation/donation.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,10 @@ import { PetdetailsComponent } from './petdetails/petdetails.component';
     PetComponent,
     HeaderComponent,
     FooterComponent,
-    PetdetailsComponent
+    PetdetailsComponent,
+    DonationComponent,
+    AboutusComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +48,16 @@ import { PetdetailsComponent } from './petdetails/petdetails.component';
     MatCardModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [SharedService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    LoginComponent
+  ],
 })
 export class AppModule { }

@@ -3,7 +3,8 @@
     min-height: 250px;
     margin: 0;
     padding: 50px;
-    padding-top: 65px;
+    padding-top: 75px;
+    padding-bottom: 15px;
 }
 
 .app-menu {
