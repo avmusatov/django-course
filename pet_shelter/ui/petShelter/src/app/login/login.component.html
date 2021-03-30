@@ -1,10 +1,8 @@
 <mat-toolbar color="primary">
-    Login
+    Войти на сайт
     <span class="flex-spacer"></span>
     <button mat-button mat-dialog-close>&times;</button>
 </mat-toolbar>
-
-<p> {{ user | json}} </p>
 
 <form novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()">
     <mat-dialog-content>

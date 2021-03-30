@@ -12,25 +12,78 @@ from petshelter.serializers import PetSerializer, LeadershipSerializer, Donation
 class PetView(APIView):
     def get(self, request):
         pets = Pet.objects.all()
-        pet_serializer = PetSerializer(pets, many=True)
-        return Response(pet_serializer.data)
+        serializer = PetSerializer(pets, many=True)
+        return Response(serializer.data)
 
     def post(self, request):
-        pet_serializer = PetSerializer(data=request.data)
-        if pet_serializer.is_valid():
-            pet_serializer.save()
-            return Response(pet_serializer.data, status=status.HTTP_201_CREATED)
-        return Response(pet_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+        serializer = PetSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def put(self, request, id):
         pet = get_object_or_404(Pet, id=id)
-        pet_serializer = PetSerializer(pet, data=request.data)
-        if pet_serializer.is_valid():
-            pet_serializer.save()
-            return Response(pet_serializer.data)
-        return Response(pet_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    
+        serializer = PetSerializer(pet, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
     def delete(self, request, id):
         pet = get_object_or_404(Pet, id=id)
         pet.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class DonationView(APIView):
+    def get(self, request):
+        donations = Donation.objects.all()
+        serializer = DonationSerializer(donations, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = DonationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def put(self, request, id):
+        donation = get_object_or_404(Donation, id=id)
+        serializer = DonationSerializer(donation, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, id):
+        donation = get_object_or_404(Donation, id=id)
+        donation.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class LeaderView(APIView):
+    def get(self, request):
+        leaders = Leadership.objects.all()
+        serializer = LeadershipSerializer(leaders, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = LeadershipSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def put(self, request, id):
+        leader = get_object_or_404(Leadership, id=id)
+        serializer = LeadershipSerializer(leader, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, id):
+        leader = get_object_or_404(Leadership, id=id)
+        leader.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

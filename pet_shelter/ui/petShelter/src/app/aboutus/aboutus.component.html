@@ -1,1 +1,76 @@
-<p>aboutus works!</p>
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+
+    <div fxFlex>
+        <div>
+            <h1>О нас</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div fxFlex>
+        <div fxLayout="column" fxLayout.gt-sm="row">
+            <div fxFlex="70">
+                <h2>Наша история</h2>
+                <p>«Друг для Друга» – это уникальный проект, который помогает людям и питомцам из приютов встретиться и
+                    стать друзьями на всю жизнь.
+
+                    Миссия проекта - формирование культуры ответственного отношения к домашним животным. Решение взять
+                    кошку или собаку из приюта должно быть осознанным, именно поэтому мы помогаем потенциальным
+                    владельцам не только найти питомца, но и подготовиться к жизни с новым другом: приобрести
+                    необходимые знания, пройти собеседование с куратором, получить поддержку от организаторов проекта.
+                </p>
+                <p>Сервис был создан брендом PURINA® в 2018 г. в рамках одного из ключевых обязательств инициативы
+                    «Пурина в обществе», которое направлено на содействие поиску хозяев для бездомных животных.</p>
+            </div>
+            <div fxFlex="30">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h2>Некоторые факты</h2>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <dl>
+                            <dt>Открытие</dt>
+                            <dd>3 февраля 2018</dd>
+                            <dt>Главная цель</dt>
+                            <dd>Усовершенствовать нормативное поле
+                                в области гуманного отношения к животным</dd>
+                            <dt>Создаем</dt>
+                            <dd>профессиональное сообщество и меняем сложившуюся ситуацию попустительского отношения
+                                к животным</dd>
+                        </dl>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+    <div fxFlex>
+        <mat-card>
+            <blockquote>
+                <h3>You better cut the pizza in four pieces because
+                    I'm not hungry enough to eat six.</h3>
+                <footer>-- Yogi Berra,
+                    <cite>The Wit and Wisdom of Yogi Berra,
+                        P. Pepe, Diversion Books, 2014</cite>
+                </footer>
+            </blockquote>
+        </mat-card>
+    </div>
+
+    
+    <div fxFlex *ngIf="leaders">
+        <h2>Наша команда</h2>
+        <mat-list>
+            <mat-list-item *ngFor="let leader of leaders">
+                <img mat-list-avatar src="{{leader.image_path}}" alt="{{leader.name}}">
+                <h3 matLine>{{leader.name}}</h3>
+                <p matLine>
+                    <span>{{leader.position}}</span>
+                </p>
+                <p matLine>{{leader.description}}</p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

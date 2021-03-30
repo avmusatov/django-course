@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { formatDate } from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
 
 import 'hammerjs';
 import { HeaderComponent } from './header/header.component';
@@ -52,7 +56,10 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatSliderModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent],
