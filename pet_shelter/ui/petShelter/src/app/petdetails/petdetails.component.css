@@ -1,7 +1,12 @@
 .large-pet-image {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 h1 {
-    font-weight: bold !important;
+  font-weight: bold !important;
 }
+
+::ng-deep .mat-line{
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+  }
